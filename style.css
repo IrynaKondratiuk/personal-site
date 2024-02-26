@@ -7,8 +7,16 @@
     font-weight: 200;
 }
 
-.header {
+.page {
     width: 100%;
+    min-height: 100vh;
+    background-image:  url("img/background.jpg");
+    background-size: cover;
+}
+
+.header {
+    width: calc(100% - 20px);
+    padding: 0px 10px;
     height: 10vh;
     background-color: #414040;
     display: flex;
@@ -37,15 +45,17 @@ a {
     color: #fff;
 }
 
+.side-nav, .side-nav-btn {
+    display: none;
+}
+
 .header .nav .menu:hover {
     color: rgb(251, 208, 216);
 }
 
 .main {
     width: 100%;
-    height: 90vh;
-    background-image:  url("img/background.jpg");
-    background-size: cover;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,6 +75,7 @@ a {
     padding: 20px;
     border-radius: 30px;
     background-color: #fff;
+    margin-left: 40px;
 }
 
 .main .content .text p {
@@ -78,7 +89,112 @@ a {
 
 .main .content img {
     width: 300px;
-    height: 400px;
+}
+
+.footer {
+    min-height: 10vh;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .side-nav-btn {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .header .nav {
+        justify-content: flex-end;
+    }
+
+    .side-nav {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+      
+    .side-nav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+      
+    .side-nav a:hover {
+        color: #f1f1f1;
+    }
+      
+    .side-nav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .main .content .text p {
+        font-size: 25px;
+    }
+    
+    .main .content .text h1 {
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .main .content img {
+        width: 250px;
+    }
+    
+}
+
+@media screen and (max-width: 950px) {
+    .main .content {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 50px;
+    }
+    
+    .main .content .text {
+        width: 400px;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .main .content .text {
+        width: 300px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main .content .text p {
+        font-size: 20px;
+    }
+
+    .main .content .text h1 {
+        font-size: 40px;
+    }
+
+    .main .content .text {
+        width: 250px;
+    }
 }
 
 
