@@ -62,7 +62,7 @@ a {
 }
 
 .main .content {
-    width: 57%;
+    width: 50%;
     height: auto;
     display: flex;
     align-items: center;
@@ -89,6 +89,7 @@ a {
 
 .main .content img {
     width: 300px;
+    border-radius: 10%;
 }
 
 .footer {

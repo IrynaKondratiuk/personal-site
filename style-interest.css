@@ -50,7 +50,7 @@ a {
 
 .main {
     width: 100%;
-    background-image:  url("img/background6.jpg");
+    background-image:  url("img/bgpt.png");
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@ a {
 }
 
 .main .title {
-    color: #fff;
+    color: #000000;
     margin: calc(10vh + 50px) 0;
     font-size: 50px;
     font-weight: bold;
